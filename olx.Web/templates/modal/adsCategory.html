@@ -1,0 +1,103 @@
+﻿<style>
+    .font20 {
+        font-size: 2.0em;
+    }
+
+    .nav > li > a {
+        padding: 8px 0px !important;
+    }
+
+    .wid_32 {
+        width: 32px;
+    }
+
+    .arrow_cenetr {
+        margin-top: 6px;
+    }
+
+    .container-fluid h2 {
+        margin-top: 0px !important;
+    }
+
+    .container-fluid .close {
+        margin-right: 5px;
+    }
+
+    .set_text {
+        position: absolute;
+        margin: 6px 7px;
+    }
+
+    a{
+        cursor:pointer;
+    }
+    a:hover, a:focus {
+        text-decoration: none !important;
+    }
+</style>
+
+<div md-dialog-title>
+    <button type="button" class="close" style="margin-top: -20px !important;" md-dialog-close>×</button>
+</div>
+
+<md-dialog-content style="padding: 15px 15px !important;">
+    <div class="container-fluid" style="padding: 0px; margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-md-3 container-first">
+                <h2> <small> Category </small> </h2>
+                <ul class="nav" style="margin-left: -10px;">
+                    <li *ngFor="let firstCategory of categorysList; let $index = index;"
+                        (click)="onSelect_adCategory(firstCategory, 1)">
+                        <a>
+                            <span class="{{ firstCategory.icon_name }} fa-2x text-center wid_32 font20"
+                                  [style.color]="colorCode[$index]"></span>
+                            <span class="set_text" [innerHtml]="firstCategory.category_name"></span>
+                            <span class="fa fa-angle-right pull-right arrow_cenetr"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 container-Second"
+                 *ngIf="selectedCategory.sceond_categoryInfo">
+                <h2> <small [innerHtml]="selectedCategory.sceond_categoryInfo.category_name"></small> </h2>
+
+                <div class="col-md-4 thumb"
+                     *ngFor="let secondCategory of selectedCategory.sceond_categoryInfo.categorys_2">
+                    <a class="thumbnail"
+                       (click)="onSelect_adCategory(secondCategory, 2)">
+                        <h4 class="text-center">
+                            <small>
+                                <strong>
+                                    {{ secondCategory.category_name }}
+                                </strong>
+                            </small>
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 container-third"
+                 *ngIf="selectedCategory.third_categoryInfo">
+
+                <div *ngIf="selectedCategory.third_categoryInfo.categorys_3">
+                    <h2> <small> {{ selectedCategory.third_categoryInfo.category_name }} </small> </h2>
+
+                    <ul class="nav text-justify" style="overflow-y: auto;height: 390px;">
+                        <li *ngFor="let thirdCategory of selectedCategory.third_categoryInfo.categorys_3"
+                            (click)="onSelect_adCategory(thirdCategory)">
+                            <a>
+                                <span>{{ thirdCategory.category_name }} </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</md-dialog-content>
+
+<md-dialog-actions class="pull-right">
+    <button class="btn btn-info" (click)="dialogRef.close(countryId)" md-raised-button>OK</button>
+</md-dialog-actions> 

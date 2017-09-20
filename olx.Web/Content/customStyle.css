@@ -1,0 +1,134 @@
+﻿
+.metro_div {
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    text-align: center;
+    border: 5px solid transparent;
+}
+
+    .metro_div a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+    }
+
+        .metro_div a i {
+            font-size: 40px;
+            padding-bottom: 15px;
+            display: inline-flex;
+        }
+
+        .metro_div a p {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+    /* transition Effects Start from Here */
+    .metro_div .icon {
+        transition: all 0.5s ease;
+    }
+
+    .metro_div:hover {
+        opacity: 0.9;
+    }
+
+        .metro_div:hover i {
+            transform: scale(1.5);
+        }
+
+a:hover, a:focus {
+    text-decoration: none !important;
+}
+
+.icon {
+    font-size: 3.0em;
+}
+
+h4 {
+    margin: 0px !important;
+}
+
+.pos_abs {
+    position: absolute;
+}
+
+.alignItm {
+    font-size: 1.2em;
+    margin-top: 8px;
+    cursor: pointer;
+    left: 27px;
+    color: #999;
+}
+
+.alignClose {
+    font-size: 1.1em;
+    margin-top: 10px;
+    cursor: pointer;
+    right: 24px;
+    color: #77b6ce;
+}
+
+.alignTxt {
+    position: initial !important;
+}
+
+.mrgBtm_8 {
+    margin-bottom: 8px;
+}
+
+.no_pading {
+    padding: 0px !important;
+}
+
+.subCategory_modal.modal.fade .modal-dialog {
+    transform: scale(0.1);
+    margin: 40px auto !important;
+    transition: all 0.3s;
+}
+
+.subCategory_modal.modal.fade.in .modal-dialog {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.txtIndent20 {
+    text-indent: 20px;
+}
+
+.txtIndent25 {
+    text-indent: 25px;
+}
+
+.txtIndent30 {
+    text-indent: 30px;
+}
+
+.locationLabel {
+    overflow: hidden;
+    width: 170px;
+    white-space: nowrap;
+}
+
+.sugestionBox_main {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+}
+
+.sugestionBox {
+    display: inline-block;
+    width: auto !important;
+    max-height: 259px;
+    overflow: auto;
+    min-width: 262px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.ng-touched.ng-invalid {
+    border-color: #F44336;
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html ng-app="olx_App">
+<head>
+    <base href="~/" />
+
+    <!-- Latest Bootstrap CSS -->
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+    @*<link href="/Content/custom-icon.css" rel="stylesheet" />*@
+    <link href="https://file.myfontastic.com/mGUXTfwcQNHQY6vsXuTC8e/icons.css" rel="stylesheet">
+
+    <link href="/Content/pnotify.css" rel="stylesheet" />
+    <link href="/Content/Admin_Style.css" rel="stylesheet" />
+    
+    <link href="/Content/customStyle.css" rel="stylesheet" />
+    <link href="/Content/ng2Material.css" rel="stylesheet" />
+
+    <!-- 1. Load libraries > file will be load from wwwroot path, instead of project -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/core.min.js"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/hammerjs/hammer.min.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+
+    <script>
+        // it will load files from systemjs.config.js with app name >
+        System.import('olxAng2_app').catch(function (err) { console.error(err); });
+    </script>
+
+</head>
+
+<body style="background-color: rgb(236, 240, 245);">
+
+    <home>
+        <div class="row text-center">
+            <i class="fa fa-spinner fa-spin"></i> Loading...
+        </div>
+    </home>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+﻿
+<style>
+    .clas {
+        color: #777;
+    }
+
+    .fileinput-button {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+        .fileinput-button input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+            font-size: 200px;
+            direction: ltr;
+            cursor: pointer;
+        }
+
+    .fa-circl {
+        border: 1px solid grey;
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 4px;
+    }
+
+    .mrg_7 {
+        margin: 7px;
+    }
+
+    .ng-hide {
+        display: none;
+    }
+
+    .pull-right {
+        float: right !important;
+        margin-top: 7px;
+    }
+
+    .caret_new {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 8px;
+        vertical-align: middle;
+        border-top: 6px dashed;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+    }
+
+    .showIcons i.loading {
+        visibility: hidden;
+    }
+
+    .showIcons:hover i.loading {
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .img_thumb {
+        width: 110px;
+        height: 92px;
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 5px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .img-responsive {
+        margin: auto;
+        max-height: 81px;
+    }
+
+    .img_thumb i {
+        color: #fff;
+        border-radius: 50%;
+        padding: 6px;
+        position: absolute;
+        top: -10px;
+    }
+
+    .align_icon1 {
+        left: -10px;
+        background-color: #B0C4DE;
+    }
+
+    .align_icon2 {
+        right: -10px;
+        background-color: #FFA07A;
+    }
+
+    .posting-title {
+        border-bottom: 1px solid #e6e6e6;
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        margin: 10px 10px 20px 10px;
+        padding-bottom: 15px;
+    }
+
+    .posting-cotainer {
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    .post-description {
+        height: 150px;
+        resize: none;
+    }
+
+    .hr-align {
+        margin: 25px -83px;
+        border: 0;
+        border-top: 1px solid #eee;
+        width: 122%;
+    }
+
+    .icon {
+        font-size: 1.3em;
+    }
+
+    .pad_0 {
+        padding: 0px;
+    }
+
+    .form-control1.ng-touched.ng-invalid {
+        border: 1px solid #F44336;
+    }
+</style> 
+
+<div class="row posting-cotainer">
+
+    <h2 class="posting-title">
+        <strong>
+            <i class="fa fa-file-text"></i> Post a Free Classified
+            Ad
+        </strong>
+    </h2>
+
+    <div class="col-md-offset-1 col-md-10">
+  
+        <form class="form-horizontal"
+              #adPost_form="ngForm"
+              (ngSubmit)="submitForm(adPost_form)">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-10">
+
+                    <div class="col-sm-6 pad_0"
+                         *ngIf="!adPosting_Fn.selected_adCategory_model">
+                        <input type="text" class="form-control1"
+                               (click)="showAads_CategoryModal()"
+                               readonly>
+                    </div>
+                    <div class="selected_categry"
+                         *ngIf="adPosting_Fn.selected_adCategory_model">
+
+                        <span class="fa-stack fa-2x fa-circl">
+                            <i [ngClass]="adPosting_Fn.selected_adCategory_model.category_2.icon_name"></i>
+                        </span>
+                        <span class="mrg_7">
+                            <span [innerHtml]="adPosting_Fn.selected_adCategory_model.category_1.name"></span>
+                            <small> | </small>
+                            <span [innerHtml]="adPosting_Fn.selected_adCategory_model.category_2.name"></span>
+                            <span *ngIf="adPosting_Fn.selected_adCategory_model.category_3">
+                                <small> | </small>
+                                {{ adPosting_Fn.selected_adCategory_model.category_3.name }}
+                            </span>
+                        </span>
+                        <a class="btn btn-primary btn-sm"
+                           (click)="showAads_CategoryModal()">Change</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  name use to create a control key value pair of a form to cehck the form is valid or not  -->
+            <!--  mgModel use for 2 way data binding -->
+            <txtBox [controlName]="adPost_form.controls.title"
+                    controlClass="col-sm-10"
+                    labelName="Ad Title">
+                <input type="text" class="form-control1" name="title" [(ngModel)]="adPost_Model.title" required>
+            </txtBox>
+
+            <!--  Dynamic component will create here  --> 
+            <div *ngIf="adPosting_Fn.selected_adCategory_model">
+
+                <txtBox [controlName]="adPost_form.controls.price"
+                        controlClass="col-sm-4"
+                        labelName="Price">
+                    <input type="text" class="form-control1" name="price" [(ngModel)]="adPost_Model.price" required>
+                </txtBox>
+
+                <!--***** Vehicle Component ********-->
+                <div *ngIf="validate('vehicleForm_group')">
+
+                    <txtBox *ngIf="validate('vehicle_model')"
+                            [controlName]="adPost_form.controls.vehicle_model"
+                            controlClass="col-sm-4"
+                            labelName="Model">
+                        <input type="text" class="form-control1" name="vehicle_model" [(ngModel)]="adPost_Model.vehicleInfo.model" required>
+                    </txtBox>
+                    <txtBox *ngIf="validate('vehicle_year')"
+                            [controlName]="adPost_form.controls.vehicle_year"
+                            controlClass="col-sm-4"
+                            labelName="Year">
+                        <input type="text" class="form-control1" name="vehicle_year" [(ngModel)]="adPost_Model.vehicleInfo.year" required>
+                    </txtBox>
+                    <txtBox *ngIf="validate('vehicle_fuel')"
+                            [controlName]="adPost_form.controls.vehicle_fuel"
+                            controlClass="col-sm-4"
+                            labelName="Fuel">
+                        <input type="text" class="form-control1" name="vehicle_fuel" [(ngModel)]="adPost_Model.vehicleInfo.fuel" required>
+                    </txtBox>
+                    <txtBox *ngIf="validate('vehicle_kmsDriven')"
+                            [controlName]="adPost_form.controls.vehicle_kmsDriven"
+                            controlClass="col-sm-4"
+                            labelName="KM's Driven">
+                        <input type="text" class="form-control1" name="vehicle_kmsDriven" [(ngModel)]="adPost_Model.vehicleInfo.kmsDriven" required>
+                    </txtBox>
+
+                </div>
+
+                <div *ngIf="validate('realStateGroup')">
+
+                    <txtBox *ngIf="validate('realState_furnished')"
+                            [controlName]="adPost_form.controls.realState_furnished"
+                            controlClass="col-sm-4"
+                            labelName="Furnished">
+                        <input type="text" class="form-control1" name="realState_furnished" [(ngModel)]="adPost_Model.realStateInfo.furnished" required>
+                    </txtBox>
+                    <txtBox *ngIf="validate('realState_bhk')"
+                            [controlName]="adPost_form.controls.realState_bhk"
+                            controlClass="col-sm-4"
+                            labelName="Bhk">
+                        <input type="text" class="form-control1" name="realState_bhk" [(ngModel)]="adPost_Model.realStateInfo.bhk" required>
+                    </txtBox>
+                    <txtBox *ngIf="validate('realState_sqrFt')"
+                            [controlName]="adPost_form.controls.realState_sqrFt"
+                            controlClass="col-sm-4"
+                            labelName="Square feet">
+                        <input type="text" class="form-control1" name="realState_sqrFt" [(ngModel)]="adPost_Model.realStateInfo.sqrFt" required>
+                    </txtBox>
+                    <txtBox *ngIf="validate('realState_sqrYard')"
+                            [controlName]="adPost_form.controls.realState_sqrYard"
+                            controlClass="col-sm-4"
+                            labelName="Square yards">
+                        <input type="text" class="form-control1" name="realState_sqrYard" [(ngModel)]="adPost_Model.realStateInfo.sqrYard" required>
+                    </txtBox>
+
+                </div>
+
+            </div>
+
+
+    <div class="form-group">
+                <label class="col-sm-2 control-label">Ad Description</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control1 post-description"></textarea>
+                </div>
+            </div>
+           
+            <div class="hr-align"></div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Upload photos</label>
+                <div class="col-sm-6">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-upload"></i>
+                        <span> Select files to upload </span>
+                        <input type="file" name="files[]" multiple="">
+                    </span>
+                </div>
+            </div>
+
+            <div class="hr-align"></div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control1" placeholder="Name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email Id</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control1" placeholder="Email Id">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Mobile Number</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control1" placeholder="Mobile Number">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Country</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control1" placeholder="Country">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">City</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control1" placeholder="City">
+                </div>
+            </div>
+
+            <div class="col-sm-offset-2 col-sm-10 mt20">
+                <input type="submit" class="btn btn-success" value="Post An Ad">
+            </div>
+        </form>
+
+        <br />
+        <br />
+        <a href="post-ad.html" class="postadinner"><span> <i class="fa fa-pencil"></i> Post An Ad</span></a>
+    </div>
+</div>
+
+

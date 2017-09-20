@@ -1,0 +1,494 @@
+[
+  {
+    "Id": 1,
+    "category_name": "Mobiles",
+    "icon_name": "icon icon-ipad",
+    "status": true
+  },
+  {
+    "Id": 2,
+    "category_name": "Electronics",
+    "icon_name": "icon icon-screen",
+    "status": true
+  },
+  {
+    "Id": 3,
+    "category_name": "Cars",
+    "icon_name": "icon icon-car",
+    "status": true
+  },
+  {
+    "Id": 4,
+    "category_name": "Bikes",
+    "icon_name": "icon icon-bike",
+    "status": true
+  },
+  {
+    "Id": 5,
+    "category_name": "Furniture",
+    "icon_name": "icon icon-sofa",
+    "status": true
+  },
+  {
+    "Id": 6,
+    "category_name": "Pets",
+    "icon_name": "icon icon-dog-main1",
+    "status": true
+  },
+  {
+    "Id": 7,
+    "category_name": "Books & Sports ",
+    "icon_name": "icon icon-book",
+    "status": true
+  },
+  {
+    "Id": 8,
+    "category_name": "Fashion",
+    "icon_name": "icon icon-fashion-jwelery",
+    "status": true
+  },
+  {
+    "Id": 9,
+    "category_name": "Kids",
+    "icon_name": "icon icon-kid-new",
+    "status": true
+  },
+  {
+    "Id": 10,
+    "category_name": "Services",
+    "icon_name": "icon icon-peoples",
+    "status": true
+  },
+  {
+    "Id": 11,
+    "category_name": "Jobs",
+    "icon_name": "icon icon-graduation-cap",
+    "status": true
+  },
+  {
+    "Id": 12,
+    "category_name": "Real Estate",
+    "icon_name": "icon icon-house",
+    "status": true
+  },
+  {
+    "Id": 13,
+    "category_name": "Mobile Phones  ",
+    "icon_name": "icon icon-mobile",
+    "status": true
+  },
+  {
+    "Id": 14,
+    "category_name": "Tablets  ",
+    "icon_name": "icon icon-ipad",
+    "status": true
+  },
+  {
+    "Id": 15,
+    "category_name": "Accessories  ",
+    "icon_name": "icon icon-mobile-acesry",
+    "status": true
+  },
+  {
+    "Id": 49,
+    "category_name": "Cameras & Accessories  ",
+    "icon_name": "icon icon-camera",
+    "status": true
+  },
+  {
+    "Id": 52,
+    "category_name": "Kitchen & Other Appliances ",
+    "icon_name": "icon icon-kitchen",
+    "status": true
+  },
+  {
+    "Id": 68,
+    "category_name": "Cars  ",
+    "icon_name": "icon icon-car",
+    "status": true
+  },
+  {
+    "Id": 69,
+    "category_name": "Commercial Vehicles ",
+    "icon_name": "icon icon-truck",
+    "status": true
+  },
+  {
+    "Id": 70,
+    "category_name": "Other Vehicles ",
+    "icon_name": "icon icon-taxi",
+    "status": true
+  },
+  {
+    "Id": 71,
+    "category_name": "Spare Parts  ",
+    "icon_name": "icon icon-carparts",
+    "status": true
+  },
+  {
+    "Id": 110,
+    "category_name": "Motorcycles  ",
+    "icon_name": "icon icon-bike",
+    "status": true
+  },
+  {
+    "Id": 111,
+    "category_name": "Scooters  ",
+    "icon_name": "icon icon-scooter",
+    "status": true
+  },
+  {
+    "Id": 112,
+    "category_name": "Bicycles  ",
+    "icon_name": "icon icon-cycle",
+    "status": true
+  },
+  {
+    "Id": 113,
+    "category_name": "Spare Parts ",
+    "icon_name": "icon icon-carparts",
+    "status": true
+  },
+  {
+    "Id": 147,
+    "category_name": "Sofa & Dining ",
+    "icon_name": "icon icon-sofa",
+    "status": true
+  },
+  {
+    "Id": 148,
+    "category_name": "Beds & Wardrobes ",
+    "icon_name": "icon icon-bed",
+    "status": true
+  },
+  {
+    "Id": 149,
+    "category_name": "Home Decor & Garden ",
+    "icon_name": "icon icon-homedecor",
+    "status": true
+  },
+  {
+    "Id": 150,
+    "category_name": "Other Household Items ",
+    "icon_name": "icon icon-other-household",
+    "status": true
+  },
+  {
+    "Id": 151,
+    "category_name": "Dogs  ",
+    "icon_name": "icon icon-dog",
+    "status": true
+  },
+  {
+    "Id": 152,
+    "category_name": "Aquariums ",
+    "icon_name": "icon icon-fish-new1",
+    "status": true
+  },
+  {
+    "Id": 153,
+    "category_name": "Pet Food & Accessories ",
+    "icon_name": "icon icon-pet-food",
+    "status": true
+  },
+  {
+    "Id": 154,
+    "category_name": "Other Pets ",
+    "icon_name": "icon icon-other-pets1",
+    "status": true
+  },
+  {
+    "Id": 171,
+    "category_name": "Books & Magazines  ",
+    "icon_name": "icon icon-book",
+    "status": true
+  },
+  {
+    "Id": 172,
+    "category_name": "Musical Instruments ",
+    "icon_name": "icon icon-guittar",
+    "status": true
+  },
+  {
+    "Id": 173,
+    "category_name": "Sports Equipment ",
+    "icon_name": "icon icon-football",
+    "status": true
+  },
+  {
+    "Id": 174,
+    "category_name": "Gym & Fitness ",
+    "icon_name": "icon icon-gym1",
+    "status": true
+  },
+  {
+    "Id": 175,
+    "category_name": "Other Hobbies ",
+    "icon_name": "icon icon-other-hobby",
+    "status": false
+  },
+  {
+    "Id": 183,
+    "category_name": "Clothes  ",
+    "icon_name": "icon icon-clothes-new",
+    "status": true
+  },
+  {
+    "Id": 184,
+    "category_name": "Footwear  ",
+    "icon_name": "icon icon-footwear1",
+    "status": true
+  },
+  {
+    "Id": 185,
+    "category_name": "Accessories  ",
+    "icon_name": "icon icon-watchacesry",
+    "status": true
+  },
+  {
+    "Id": 192,
+    "category_name": "Furniture And Toys ",
+    "icon_name": "icon icon-toy",
+    "status": true
+  },
+  {
+    "Id": 193,
+    "category_name": "Prams & Walkers ",
+    "icon_name": "icon icon-toy-walker",
+    "status": true
+  },
+  {
+    "Id": 194,
+    "category_name": "Accessories ",
+    "icon_name": "icon icon-toy-acesry",
+    "status": true
+  },
+  {
+    "Id": 195,
+    "category_name": "Education & Classes  ",
+    "icon_name": "icon icon-teaching",
+    "status": true
+  },
+  {
+    "Id": 196,
+    "category_name": "Web Development ",
+    "icon_name": "icon icon-ie",
+    "status": true
+  },
+  {
+    "Id": 197,
+    "category_name": "Electronics & Computer Repair  ",
+    "icon_name": "icon icon-computer-repair-service",
+    "status": true
+  },
+  {
+    "Id": 198,
+    "category_name": "Maids & Domestic Help ",
+    "icon_name": "icon icon-maid",
+    "status": true
+  },
+  {
+    "Id": 199,
+    "category_name": "Health & Beauty ",
+    "icon_name": "icon icon-health-beauty",
+    "status": true
+  },
+  {
+    "Id": 200,
+    "category_name": "Consultancy Services",
+    "icon_name": "icon icon-consultancy",
+    "status": true
+  },
+  {
+    "Id": 201,
+    "category_name": "Drivers & Taxi ",
+    "icon_name": "icon icon-taxi-new",
+    "status": true
+  },
+  {
+    "Id": 202,
+    "category_name": "Event Services ",
+    "icon_name": "icon icon-calendar-check-o",
+    "status": true
+  },
+  {
+    "Id": 203,
+    "category_name": "Other Services ",
+    "icon_name": "icon icon-other-service",
+    "status": true
+  },
+  {
+    "Id": 209,
+    "category_name": "Customer Service ",
+    "icon_name": "icon icon-customerservice",
+    "status": true
+  },
+  {
+    "Id": 210,
+    "category_name": "IT ",
+    "icon_name": "icon icon-it-job",
+    "status": true
+  },
+  {
+    "Id": 211,
+    "category_name": "Online ",
+    "icon_name": "icon icon-onlinejob",
+    "status": false
+  },
+  {
+    "Id": 212,
+    "category_name": "Seles & Marketing",
+    "icon_name": "icon icon-marketig",
+    "status": true
+  },
+  {
+    "Id": 213,
+    "category_name": "Advertising & PR ",
+    "icon_name": "icon icon-advertisment",
+    "status": false
+  },
+  {
+    "Id": 214,
+    "category_name": "Sales ",
+    "icon_name": "icon icon-sale-service-1",
+    "status": false
+  },
+  {
+    "Id": 215,
+    "category_name": "Clerical & Administration ",
+    "icon_name": "icon icon-clearical",
+    "status": false
+  },
+  {
+    "Id": 216,
+    "category_name": "Human Resources ",
+    "icon_name": "icon icon-hr",
+    "status": true
+  },
+  {
+    "Id": 217,
+    "category_name": "Education ",
+    "icon_name": "icon icon-education-job",
+    "status": true
+  },
+  {
+    "Id": 218,
+    "category_name": "Hotels & Tourism ",
+    "icon_name": "icon icon-tourist",
+    "status": true
+  },
+  {
+    "Id": 219,
+    "category_name": "Accounting & Finance ",
+    "icon_name": "icon icon-finance-service",
+    "status": true
+  },
+  {
+    "Id": 220,
+    "category_name": "Manufacturing ",
+    "icon_name": "icon icon-manufacture",
+    "status": true
+  },
+  {
+    "Id": 221,
+    "category_name": "Other Jobs ",
+    "icon_name": "icon icon-other-job-new",
+    "status": true
+  },
+  {
+    "Id": 222,
+    "category_name": "Houses  ",
+    "icon_name": "icon icon-houses",
+    "status": true
+  },
+  {
+    "Id": 223,
+    "category_name": "Apartments  ",
+    "icon_name": "icon icon-apartment-1",
+    "status": true
+  },
+  {
+    "Id": 224,
+    "category_name": "PG & Roommates ",
+    "icon_name": "icon icon-pg",
+    "status": true
+  },
+  {
+    "Id": 225,
+    "category_name": "Land & Plots  ",
+    "icon_name": "icon icon-landplots",
+    "status": true
+  },
+  {
+    "Id": 226,
+    "category_name": "Shops - Offices - Commercial Space  ",
+    "icon_name": "icon icon-shopsale",
+    "status": true
+  },
+  {
+    "Id": 227,
+    "category_name": "Vacation Rentals - Guest Houses ",
+    "icon_name": "icon icon-salehome",
+    "status": true
+  },
+  {
+    "Id": 236,
+    "category_name": "Computer & Laptop Accessories",
+    "icon_name": "icon icon-computer-acesrys",
+    "status": true
+  },
+  {
+    "Id": 237,
+    "category_name": "Laptops",
+    "icon_name": "icon icon-laptop",
+    "status": true
+  },
+  {
+    "Id": 238,
+    "category_name": "Desktops",
+    "icon_name": "icon icon-desktop",
+    "status": true
+  },
+  {
+    "Id": 239,
+    "category_name": "ACs & Air Coolers",
+    "icon_name": "icon icon-ac",
+    "status": true
+  },
+  {
+    "Id": 240,
+    "category_name": "Refrigators",
+    "icon_name": "icon icon-fridge",
+    "status": true
+  },
+  {
+    "Id": 241,
+    "category_name": "TVs",
+    "icon_name": "icon icon-smart-tv2",
+    "status": true
+  },
+  {
+    "Id": 242,
+    "category_name": "Washing Machines",
+    "icon_name": "icon icon-washing-machine",
+    "status": true
+  },
+  {
+    "Id": 243,
+    "category_name": "Video Games",
+    "icon_name": "icon icon-game no_line",
+    "status": true
+  },
+  {
+    "Id": 244,
+    "category_name": "Music Systems",
+    "icon_name": "icon icon-music-system",
+    "status": true
+  },
+  {
+    "Id": 245,
+    "category_name": "Other Electronic Items",
+    "icon_name": "icon icon-other-electronic-item",
+    "status": true
+  }
+]

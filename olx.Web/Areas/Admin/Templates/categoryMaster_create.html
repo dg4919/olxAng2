@@ -1,0 +1,91 @@
+﻿<style>
+    .ripple {
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0,0,0);
+    }
+
+        .ripple:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle,#000 10%,transparent 10.01%);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10,10);
+            opacity: 0;
+            transition: transform .5s,opacity 1s;
+        }
+
+        .ripple:active:after {
+            transform: scale(0,0);
+            opacity: .2;
+            transition: 0s;
+        }
+
+    .myclass {
+        position: absolute;
+        right: 23px;
+        margin-top: -24px;
+        cursor: pointer;
+    }
+
+    #inventoryBox {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-top: 15px;
+    }
+</style>
+
+<!--<link href="/Content/custom-icon.css" rel="stylesheet" />-->
+<link href="https://file.myfontastic.com/mGUXTfwcQNHQY6vsXuTC8e/icons.css" rel="stylesheet">
+
+<div class="sz_card">
+    <!--Hello {{ userName }}-->
+
+    <div class="panel panel-success">
+
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4> Manage Category </h4>
+                </div>
+                <div class="col-sm-6" style="margin-top: -11px;">
+                    <input type="button"
+                           class="btn btn-sm btn-info pull-right"
+                           ng-click="createJson()"
+                           value="Craete Json">
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+
+                <category ng-if="categorys.first_categry.length"
+                          category-list="categorys.first_categry"
+                          category-level="2">
+                    <!---- Level of next category to be retrieve --->
+                </category>
+
+                <category ng-if="categorys.second_categry.length"
+                          category-list="categorys.second_categry"
+                          category-level="3">
+                </category>
+
+
+                <category ng-if="categorys.third_categry.length"
+                          category-list="categorys.third_categry"
+                          category-level="4">
+                </category>
+
+            </div>
+        </div>
+    </div>
+
+</div>

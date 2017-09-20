@@ -1,0 +1,116 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="olxAdmin_App">
+<head>
+    <base href="~/" />
+
+    <!-- Latest Bootstrap CSS -->
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+    <link href="/Content/pnotify.css" rel="stylesheet" />
+
+    <link href="/Content/Admin_Style.css" rel="stylesheet" />
+
+    <style>
+        .form-group .form-control.has-error {
+            border-color: #dd4b39;
+            box-shadow: none;
+        }
+
+        .form-group .has-error {
+            color: #dd4b39;
+        }
+    </style>
+
+</head>
+
+<body class="sticky-header">
+    <section>
+
+        <div>
+            <!-- left side start-->
+            <div class="left-side sticky-left-side">
+
+                <!--logo and iconic logo start-->
+                <div class="logo">
+                    <h1><a href="index.html">Silverzone</a></h1>
+                </div>
+                <div class="logo-icon text-center">
+                    <a href="index.html"><i class="lnr lnr-home"></i> </a>
+                </div>
+
+                <!--logo and iconic logo end-->
+                <div class="left-side-inner">
+
+                    <!--sidebar nav start-->
+                    <ul class="nav nav-pills nav-stacked custom-nav">
+                        <li class=""><a href="index.html"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
+                        
+                        <li class="menu-list">
+                            <a href="#">
+                                <i class="lnr lnr-cog"></i>
+                                <span class="ng-binding">Category Master</span>
+                            </a>
+                            <ul class="sub-menu-list">
+                                <li><a ui-sref="categoryMaster"> List </a> </li>
+                                <li><a ui-sref="dealer_Inventory_create"> Delaer </a> </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <!--sidebar nav end-->
+                </div>
+            </div>
+            <!-- left side end-->
+            <!-- main content start-->
+            <div class="main-content">
+                <div id="page-wrapper">
+                    <div class="row">
+                        <ui-view ng-cloak block-ui></ui-view>
+                    </div>
+                </div>               
+
+            </div>
+        </div>
+     
+        <!--footer section start-->
+        <footer>
+            <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
+        </footer>
+
+    </section>
+
+    <!--Start Lib-->
+    <!--  Latest Bootstrap & Jquery js  -->
+    <script src="/Scripts/Lib/jquery/jquery-3.1.1.js"></script>
+    <script src="/Scripts/Lib/jquery/pnotify.js"></script>
+
+    <script src="/Scripts/Lib/angularjs/angular-1.5.0.js"></script>
+    <script src="/Scripts/Lib/angularjs/ui-bootstrap-tpls-2.3.1.js"></script>
+    <script src="/Scripts/Lib/angularjs/angular-ui-router.js"></script>
+    <script src="/Scripts/Lib/angularjs/angular-animate.js"></script>
+
+    <script src="/Scripts/Lib/angularjs/angular-pnotify.js"></script>
+     
+    <!--End Lib-->
+
+    <!--Start Common App-->
+    <script src="/Scripts/App/Shared/olx_common_app.js"></script>
+    <script src="/Scripts/App/Shared/olx_shared_service.js"></script>
+    <script src="/Areas/Admin/Scripts/olx_admin_app.js"></script>
+
+    <!--End Common App-->
+
+    @* *********  Components  ********** *@
+    <script src="/Areas/Admin/Scripts/Component/admin_component.js"></script>
+    <script src="/Areas/Admin/Scripts/Component/shared_component.js"></script>
+
+    @* *********  Service  ********** *@
+    <script src="/Areas/Admin/Scripts/Services/admin_service.js"></script>
+
+</body>
+</html>
